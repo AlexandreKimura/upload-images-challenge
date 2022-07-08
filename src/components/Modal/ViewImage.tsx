@@ -24,15 +24,15 @@ export function ModalViewImage({
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent maxW="900px" maxH="600px">
-        <ModalBody>
+        <ModalBody p={0}>
           <Image src={imgUrl} />
         </ModalBody>
+        <ModalFooter bg="gray.900" h="2rem">
+          <Link href={imgUrl} isExternal mr="auto">
+            Abrir original
+          </Link>
+        </ModalFooter>
       </ModalContent>
-      <ModalFooter>
-        <Link href={imgUrl} isExternal>
-          Abrir original
-        </Link>
-      </ModalFooter>
     </Modal>
   );
 }
